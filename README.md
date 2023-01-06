@@ -1,2 +1,2 @@
-# new-to-verilog-
+# new-to-verilog ?
 Verilog made easy
