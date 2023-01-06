@@ -46,6 +46,23 @@ endspecify
 module spec_eg(..);
   specparam t_hold=0.1;
 endmodule
+
+//--------------------------------------------------------------------------------------------------------------
+//using parameters in testbench to generate clk with period of 10ps
+`timescale 1ps/1ps //time unit /time precision 
+module top_module ( );
+    specparam time_period =10; 
+    //parameter time_period =10; //this also works but I would prefer using specparam for timescale
+	reg clk;
+    initial clk =0;
+    
+    always begin
+        #(time_period/2) clk = ~clk;
+    end
+    
+    dut dut_eg(.clk(clk));
+    
+endmodule
   
 
   
