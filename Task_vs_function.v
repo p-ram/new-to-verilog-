@@ -28,7 +28,7 @@ module task_local();
   endtask
 endmodule
 
-module task_calling(input a,out b);
+module task_calling(input a,output b);
   reg b;
   `include "task_global.v" //no ";"
   always@(*) begin
