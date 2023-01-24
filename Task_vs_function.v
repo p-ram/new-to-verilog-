@@ -50,7 +50,7 @@ endmodule
 \
 module function_call(input a,output b);
   reg b;
-  `include "function_call.v" // no ";"
+  `include "my_function.v" // no ";"
   assign b=(sub(a)==0); //function can be used as expression
 endmodule
   
